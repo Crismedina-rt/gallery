@@ -1,0 +1,271 @@
+/* Reset */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*main styling*/
+html,
+body {
+    font-family: jost;
+}
+
+h1 {
+    font-size: 1.6rem;
+    text-align: left;
+    font-weight: 400;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    vertical-align: middle;
+    color: rgb(208, 232, 232);
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    color: rgb(180, 218, 205);
+}
+
+h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 50px;
+    color: rgb(180, 218, 205);
+}
+
+h4 {
+    font-size: 1rem;
+    padding-bottom: 20px;
+    font-weight: 200;
+    color: rgb(180, 218, 205)
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 10px 0;
+    line-height: 1.7em;
+    color: rgb(167, 195, 197);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+span {
+    color: rgb(209, 228, 228);
+    padding-left: 5px;
+    
+}
+
+/*utility Classes*/
+.container {
+    margin:auto;
+    max-width: 1300px;
+    overflow: auto;
+    padding: 0 1px;
+    padding-top: 20px;
+}
+
+.fastcontact {
+    padding-top: 30px;
+}
+
+.fastcontact img {
+max-width: 30px;
+margin-bottom: 20px;
+vertical-align: middle;
+}
+
+.fastcontact span{
+    vertical-align:super;
+    
+}
+
+
+
+
+
+/*header*/
+
+#mainheader {
+    background-color:rgb(64, 79, 91);
+    background-attachment: fixed;
+}
+
+#presentation {
+    margin: auto;
+	max-width: 1000px;
+	overflow: auto;
+	padding: 80px 1px;
+    padding-left:6%;
+    padding-right: 3%;
+    background-color:transparent;
+    display: flex;
+}
+
+
+#description {
+    float: right;
+    max-width: 600px;
+    text-align:left;
+    padding-left: 50px;
+    padding-right: 5%;
+    background-color: transparent;
+}
+
+/*esto parece que no funciona para alinear texto verticalmente*/
+#description p {
+    line-height: 1.5;
+  vertical-align: middle;
+}
+
+
+
+#roundphoto img {
+    width: 300px;
+    border-radius: 50%;
+    aspect-ratio: 1; /* Se ajusta al mismo valor que el width */
+    object-fit: cover;
+    padding-left: 10%; /*es lo que le da el efecto deformado y añade padding al mismo tiempo*/
+}
+
+
+
+/*Gallery*/
+
+.mainimage {
+    padding-bottom: 60px;
+}
+.gallery{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap: 10px;
+    max-width: 900px;
+    margin: auto; /*es quí donde si pongo 0% se alinea arriba pero sale un margen feo dentro de la foto*/
+    margin-top: 0;  /*Línea añadida para fijar la columna arriba!*/
+    padding-left: 10px;
+
+
+}
+
+.gallery-item {
+    flex: 1 1 calc(25% 10px);
+    max-width: calc(25% 10px);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.gallery-main {
+    flex: 1 1 calc(25% 10px);
+    max-width: calc(25% 10px);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-container {
+    display: flex;  /*esto hace que las dos columnas -contenidas dentro- de la galería estén una junto a la otra*/
+    max-width: 90%; /*para que no ocupe toda la pantalla*/
+    margin:auto;   /*para que esté centrado en medio*/
+    
+}
+
+#gallery {
+    background-color: rgb(54, 54, 54);
+    padding-bottom: 60px;
+}
+
+/*footer*/
+#about {
+    background-color:rgb(64, 79, 91);
+
+}
+
+#mainfooter {
+    background-color:rgb(64, 79, 91);
+    margin: auto;
+    display: flex;
+
+
+}
+
+.footerbox {
+    margin: auto;
+    text-align: center;
+}
+
+/*responsive design gallery*/
+
+@media (max-width: 650px) {
+    .gallery-item {
+        flex: 1 1 calc(50% 10px);
+        max-width: calc (50% 10px);
+    }
+
+    .gallery-container {
+    display: block;  
+    max-width: 90%; 
+    margin:auto;
+}
+
+    .gallery {padding-top: 10px;
+    
+    }
+
+    #presentation {
+        display: block;
+        max-width: 500px;
+        margin: auto;
+        padding: 8% 8%;
+        text-align: center;
+    }
+
+    #mainheader img {
+        padding-left: 0%;
+        padding-bottom: 20px;
+        
+    }
+
+    #description {
+        padding: 8% 8%;
+        padding-left: 8%;
+        justify-content: center;
+
+    }
+
+    .fastcontact span {
+        vertical-align:top;
+    }
+    .fastcontact img {
+        margin-bottom: 0px;
+    }
+
+    .fastcontact {
+        margin-top: 20px;
+    }
+
+}
